@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Distributor ORMOY 2026</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C9A84C;
+      --gold-dark: #a8893d;
+      --black: #0a0a0a;
+      --dark: #161616;
+      --gray: #4a4a4a;
+      --light: #f6f3eb;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+    }
+
+    html, body {
+      font-family: var(--font-body);
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 18mm;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    /* COVER */
+    .cover {
+      background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.9) 100%), url('images/hero-blue.webp') center/cover no-repeat;
+      color: #fff;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-inner { padding: 30mm 18mm; display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; }
+    .cover-logo { height: 28mm; margin-bottom: 14mm; filter: brightness(0) invert(1); }
+    .cover-label { font-size: 9pt; letter-spacing: 6pt; color: var(--gold); text-transform: uppercase; margin-bottom: 6mm; font-weight: 500; }
+    .cover-title { font-family: var(--font-heading); font-size: 38pt; font-weight: 400; line-height: 1.1; margin-bottom: 6mm; }
+    .cover-sub { font-size: 11pt; color: rgba(255,255,255,0.75); font-weight: 300; max-width: 130mm; }
+    .cover-divider { width: 30mm; height: 1px; background: var(--gold); margin: 8mm 0; }
+    .cover-year { font-family: var(--font-heading); font-size: 14pt; color: var(--gold); letter-spacing: 4pt; }
+    .cover-footer { padding: 12mm 18mm; width: 100%; display: flex; justify-content: space-between; font-size: 8pt; color: rgba(255,255,255,0.6); letter-spacing: 2pt; text-transform: uppercase; }
+
+    /* SECTION HEADER */
+    .page-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 6mm; border-bottom: 1px solid #e6e0d0; margin-bottom: 10mm; }
+    .page-header-logo { height: 9mm; }
+    .page-number { font-size: 8pt; color: var(--gray); letter-spacing: 2pt; text-transform: uppercase; }
+
+    /* TYPOGRAPHY */
+    .eyebrow { font-size: 8pt; letter-spacing: 4pt; color: var(--gold); text-transform: uppercase; margin-bottom: 5mm; font-weight: 600; }
+    .h1 { font-family: var(--font-heading); font-size: 28pt; font-weight: 400; line-height: 1.15; color: #111; margin-bottom: 6mm; }
+    .h2 { font-family: var(--font-heading); font-size: 20pt; font-weight: 400; line-height: 1.2; color: #111; margin-bottom: 5mm; }
+    .h3 { font-family: var(--font-heading); font-size: 12pt; font-weight: 500; color: #111; margin-bottom: 2mm; }
+    .lead { font-size: 11pt; color: #2a2a2a; line-height: 1.7; margin-bottom: 5mm; }
+    .body { font-size: 10pt; color: #3a3a3a; line-height: 1.7; }
+
+    /* ABOUT PAGE */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; margin-top: 8mm; }
+    .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 4mm; margin: 10mm 0 8mm; }
+    .stat-box { border: 1px solid #e6e0d0; padding: 6mm 4mm; text-align: center; }
+    .stat-num { font-family: var(--font-heading); font-size: 18pt; color: var(--gold); display: block; margin-bottom: 1mm; line-height: 1; }
+    .stat-lbl { font-size: 7pt; letter-spacing: 2pt; text-transform: uppercase; color: var(--gray); }
+
+    .collections-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 6mm; margin-top: 6mm; }
+    .col-card { border-left: 2pt solid var(--gold); padding: 4mm 6mm; background: #faf7ef; }
+    .col-card h4 { font-family: var(--font-heading); font-size: 11pt; font-weight: 500; color: #111; margin-bottom: 1mm; letter-spacing: 1pt; }
+    .col-card p { font-size: 9pt; color: var(--gray); }
+
+    /* COLLECTION INTRO */
+    .collection-hero { display: flex; align-items: center; gap: 10mm; margin-bottom: 10mm; padding: 8mm; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); color: #fff; }
+    .collection-hero-num { font-family: var(--font-heading); font-size: 48pt; color: var(--gold); line-height: 1; opacity: 0.8; }
+    .collection-hero-text h2 { font-family: var(--font-heading); font-size: 22pt; color: #fff; font-weight: 400; margin-bottom: 2mm; letter-spacing: 1pt; }
+    .collection-hero-text p { font-size: 10pt; color: rgba(255,255,255,0.7); }
+
+    /* PRODUCT GRID */
+    .product-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 6mm; }
+    .product-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 8mm; }
+    .product { border: 1px solid #e6e0d0; padding: 5mm; display: flex; flex-direction: column; background: #fff; }
+    .product-img { width: 100%; aspect-ratio: 1/1; background: #f6f3eb; margin-bottom: 4mm; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .product-img img { width: 100%; height: 100%; object-fit: cover; }
+    .product-name { font-family: var(--font-heading); font-size: 11pt; font-weight: 500; color: #111; margin-bottom: 1mm; }
+    .product-tag { font-size: 7pt; letter-spacing: 2pt; color: var(--gold); text-transform: uppercase; margin-bottom: 2mm; font-weight: 600; }
+    .product-desc { font-size: 8.5pt; color: #4a4a4a; line-height: 1.55; }
+
+    /* SIGNATURE FEATURE PAGE */
+    .signature-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; margin-top: 8mm; align-items: center; }
+    .signature-img { aspect-ratio: 1/1; background: #f6f3eb; overflow: hidden; }
+    .signature-img img { width: 100%; height: 100%; object-fit: cover; }
+    .signature-content .badge { display: inline-block; background: var(--gold); color: #000; font-size: 8pt; letter-spacing: 2pt; text-transform: uppercase; padding: 2mm 5mm; font-weight: 600; margin-bottom: 5mm; }
+    .signature-content h2 { font-family: var(--font-heading); font-size: 30pt; color: #111; margin-bottom: 4mm; line-height: 1.1; }
+    .signature-content .tagline { font-size: 10pt; color: var(--gold); letter-spacing: 2pt; text-transform: uppercase; margin-bottom: 6mm; }
+    .signature-content p { font-size: 10pt; color: #3a3a3a; line-height: 1.75; margin-bottom: 4mm; }
+    .signature-notes { margin-top: 6mm; }
+    .signature-notes h4 { font-size: 8pt; letter-spacing: 3pt; color: var(--gold); margin-bottom: 3mm; text-transform: uppercase; }
+    .signature-notes ul { list-style: none; }
+    .signature-notes li { font-size: 9pt; color: #2a2a2a; padding: 2mm 0; border-bottom: 1px solid #efe8d4; display: flex; justify-content: space-between; }
+    .signature-notes li:last-child { border-bottom: none; }
+    .signature-notes li strong { color: #111; font-weight: 600; }
+
+    /* B2B PARTNERSHIP */
+    .partnership-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: #fff; padding: 12mm; text-align: center; margin-bottom: 8mm; }
+    .partnership-hero .eyebrow { color: var(--gold); margin-bottom: 4mm; }
+    .partnership-hero h2 { font-family: var(--font-heading); font-size: 26pt; color: #fff; margin-bottom: 4mm; font-weight: 400; }
+    .partnership-hero p { font-size: 11pt; color: rgba(255,255,255,0.75); max-width: 130mm; margin: 0 auto; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 5mm; margin-bottom: 10mm; }
+    .benefit { padding: 5mm; border: 1px solid #e6e0d0; }
+    .benefit-icon { width: 8mm; height: 8mm; background: rgba(201,168,76,0.15); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; margin-bottom: 3mm; }
+    .benefit-icon svg { width: 5mm; height: 5mm; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .benefit h4 { font-family: var(--font-heading); font-size: 11pt; font-weight: 500; color: #111; margin-bottom: 1mm; }
+    .benefit p { font-size: 8.5pt; color: #4a4a4a; line-height: 1.55; }
+
+    .contact-card { background: #0a0a0a; color: #fff; padding: 10mm; text-align: center; }
+    .contact-card h3 { font-family: var(--font-heading); font-size: 16pt; color: #fff; margin-bottom: 4mm; font-weight: 400; }
+    .contact-row { display: grid; grid-template-columns: repeat(2,1fr); gap: 6mm; margin-top: 6mm; }
+    .contact-item { padding: 4mm; border: 1px solid rgba(201,168,76,0.3); }
+    .contact-item .label { font-size: 7pt; letter-spacing: 2pt; color: var(--gold); text-transform: uppercase; margin-bottom: 2mm; }
+    .contact-item .val { font-size: 11pt; color: #fff; }
+    .contact-footer { margin-top: 6mm; font-size: 9pt; color: rgba(255,255,255,0.6); }
+    .contact-footer a { color: var(--gold); text-decoration: none; }
+
+    /* BACK COVER */
+    .back-cover { background: var(--black); color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .back-logo { height: 32mm; filter: brightness(0) invert(1); margin-bottom: 10mm; }
+    .back-tag { font-size: 10pt; letter-spacing: 6pt; color: var(--gold); text-transform: uppercase; margin-bottom: 8mm; }
+    .back-cv { font-size: 9pt; color: rgba(255,255,255,0.5); margin-top: 8mm; letter-spacing: 1pt; }
+    .back-url { font-size: 11pt; color: var(--gold); margin-top: 4mm; }
+  </style>
+</head>
+
+<body>
+
+  <!-- PAGE 1: COVER -->
+  <div class="page cover">
+    <div class="cover-footer">
+      <span>EST. 2012</span>
+      <span>ORMOY.CO.ID</span>
+    </div>
+    <div class="cover-inner">
+      <img src="images/logo-ormoy.png" alt="ORMOY" class="cover-logo">
+      <p class="cover-label">Distributor Catalog</p>
+      <h1 class="cover-title">The Luxurious<br>Fragrance</h1>
+      <div class="cover-divider"></div>
+      <p class="cover-year">2026 EDITION</p>
+      <p class="cover-sub" style="margin-top:8mm;">Katalog resmi varian parfum mobil premium ORMOY untuk calon mitra distributor di seluruh Indonesia.</p>
+    </div>
+    <div class="cover-footer">
+      <span>CV ORMOY INDO PRATAMA</span>
+      <span>VOL. 01</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2: ABOUT -->
+  <div class="page">
+    <div class="page-header">
+      <img src="images/logo-ormoy.png" alt="ORMOY" class="page-header-logo">
+      <span class="page-number">02 / Tentang Kami</span>
+    </div>
+    <p class="eyebrow">Tentang ORMOY</p>
+    <h1 class="h1">Brand Parfum Mobil Premium<br>Indonesia Sejak 2012</h1>
+    <p class="lead">ORMOY adalah brand parfum mobil premium asli Indonesia yang telah berdiri lebih dari satu dekade. Diproduksi langsung oleh CV ORMOY INDO PRATAMA dengan formula slow-release technology, ORMOY dirancang khusus untuk iklim tropis Indonesia — wangi yang lembut, tahan hingga 30 hari, dan tidak menyebabkan pusing.</p>
+    <p class="body">Sejak 2012, lebih dari 3 juta unit ORMOY telah dipercaya pengemudi di seluruh Indonesia. Kami terus berinovasi dengan 21+ varian aroma yang dikemas dalam botol kayu khas — bukan sekadar pengharum kabin, tapi statement gaya berkendara.</p>
+
+    <div class="stats-row">
+      <div class="stat-box"><span class="stat-num">14+</span><span class="stat-lbl">Tahun</span></div>
+      <div class="stat-box"><span class="stat-num">21+</span><span class="stat-lbl">Varian</span></div>
+      <div class="stat-box"><span class="stat-num">3 Jt+</span><span class="stat-lbl">Terjual</span></div>
+      <div class="stat-box"><span class="stat-num">34</span><span class="stat-lbl">Provinsi</span></div>
+    </div>
+
+    <p class="eyebrow" style="margin-top:8mm;">Empat Karakter Aroma</p>
+    <h2 class="h2">Koleksi ORMOY</h2>
+    <div class="collections-grid">
+      <div class="col-card">
+        <h4>SIGNATURE</h4>
+        <p>Hangat dan lembut. Varian ikonik yang dicintai sejak hari pertama.</p>
+      </div>
+      <div class="col-card">
+        <h4>COMFORT</h4>
+        <p>Menenangkan dan elegan. Untuk perjalanan yang nyaman setiap hari.</p>
+      </div>
+      <div class="col-card">
+        <h4>FRESH</h4>
+        <p>Bersih dan menyegarkan. Energi untuk pengemudi yang aktif.</p>
+      </div>
+      <div class="col-card">
+        <h4>SWEET</h4>
+        <p>Manis dan personal. Sentuhan personality yang berbeda.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: HONEY WOOD (SIGNATURE) -->
+  <div class="page">
+    <div class="page-header">
+      <img src="images/logo-ormoy.png" alt="ORMOY" class="page-header-logo">
+      <span class="page-number">03 / Signature Collection</span>
+    </div>
+    <div class="signature-feature">
+      <div class="signature-img">
+        <img src="images/honey-wood.webp" alt="ORMOY Honey Wood">
+      </div>
+      <div class="signature-content">
+        <span class="badge">Varian Terlaris</span>
+        <h2>Honey Wood</h2>
+        <p class="tagline">Signature Collection</p>
+        <p>Madu segar di atas kayu hangat. Manis, lembut, dan menenangkan. Honey Wood adalah aroma ikonik ORMOY yang paling dicintai — varian best-seller ORMOY sejak diluncurkan.</p>
+        <p>Aroma woody yang hangat berpadu dengan honey undertone yang manis lembut, menciptakan pengalaman kabin yang menenangkan untuk perjalanan apapun.</p>
+        <div class="signature-notes">
+          <h4>Profil Aroma</h4>
+          <ul>
+            <li><span>Top Notes</span><strong>Honey, Citrus Light</strong></li>
+            <li><span>Heart Notes</span><strong>Warm Woods, Amber</strong></li>
+            <li><span>Base Notes</span><strong>Sandalwood, Musk</strong></li>
+            <li><span>Karakter</span><strong>Hangat &amp; Lembut</strong></li>
+            <li><span>Ketahanan</span><strong>Hingga 30 Hari</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 4: COMFORT COLLECTION -->
+  <div class="page">
+    <div class="page-header">
+      <img src="images/logo-ormoy.png" alt="ORMOY" class="page-header-logo">
+      <span class="page-number">04 / Comfort Collection</span>
+    </div>
+    <div class="collection-hero">
+      <div class="collection-hero-num">02</div>
+      <div class="collection-hero-text">
+        <h2>COMFORT</h2>
+        <p>Menenangkan dan elegan — untuk perjalanan yang nyaman setiap hari.</p>
+      </div>
+    </div>
+    <div class="product-grid-3">
+      <div class="product">
+        <div class="product-img"><img src="images/black-coffee.webp" alt="Black Coffee"></div>
+        <p class="product-tag">Comfort</p>
+        <h3 class="product-name">Black Coffee</h3>
+        <p class="product-desc">Kopi hitam pekat yang bold. Membangkitkan semangat, sempurna untuk perjalanan kerja.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/mocha-coffee.webp" alt="Mocha Coffee"></div>
+        <p class="product-tag">Comfort</p>
+        <h3 class="product-name">Mocha Coffee</h3>
+        <p class="product-desc">Mocha creamy dan hangat. Seperti duduk di kafe favorit.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/choco-latte.webp" alt="Choco Latte"></div>
+        <p class="product-tag">Comfort</p>
+        <h3 class="product-name">Choco Latte</h3>
+        <p class="product-desc">Cokelat manis berpadu kopi lembut. Hangat dan memanjakan.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/sunset-mirage.webp" alt="Sunset Mirage"></div>
+        <p class="product-tag">Comfort</p>
+        <h3 class="product-name">Sunset Mirage</h3>
+        <p class="product-desc">Kelapa tropis berpadu pandan harum. Hangat dan eksotis.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/mystery-scent.webp" alt="Mystery Scent"></div>
+        <p class="product-tag">Comfort</p>
+        <h3 class="product-name">Mystery Scent</h3>
+        <p class="product-desc">Maskulin, dalam, penuh teka-teki. Untuk pria yang percaya diri.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/morning-glory.webp" alt="Morning Glory"></div>
+        <p class="product-tag">Comfort</p>
+        <h3 class="product-name">Morning Glory</h3>
+        <p class="product-desc">Segar dan cerah seperti pagi hari. Membangkitkan semangat.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/pinacolada.webp" alt="Pinacolada"></div>
+        <p class="product-tag">Comfort</p>
+        <h3 class="product-name">Pinacolada</h3>
+        <p class="product-desc">Nanas tropis dan kelapa creamy. Nuansa liburan pantai.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 5: FRESH COLLECTION -->
+  <div class="page">
+    <div class="page-header">
+      <img src="images/logo-ormoy.png" alt="ORMOY" class="page-header-logo">
+      <span class="page-number">05 / Fresh Collection</span>
+    </div>
+    <div class="collection-hero">
+      <div class="collection-hero-num">03</div>
+      <div class="collection-hero-text">
+        <h2>FRESH</h2>
+        <p>Bersih dan menyegarkan — energi untuk pengemudi yang aktif.</p>
+      </div>
+    </div>
+    <div class="product-grid-3">
+      <div class="product">
+        <div class="product-img"><img src="images/tropical-island.webp" alt="Tropical Island"></div>
+        <p class="product-tag">Fresh</p>
+        <h3 class="product-name">Tropical Island</h3>
+        <p class="product-desc">Angin pantai tropis. Buah-buahan dan aroma laut berpadu.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/green-ice.webp" alt="Green Ice"></div>
+        <p class="product-tag">Fresh</p>
+        <h3 class="product-name">Green Ice</h3>
+        <p class="product-desc">Mentol dan daun hijau yang mendinginkan. Terbaik untuk perjalanan jauh.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/blue-blazer.webp" alt="Blue Blazer"></div>
+        <p class="product-tag">Fresh</p>
+        <h3 class="product-name">Blue Blazer</h3>
+        <p class="product-desc">Aquatic woody yang tajam dan elegan. Maskulin, berani.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/air-freshco.webp" alt="Air Freshco"></div>
+        <p class="product-tag">Fresh</p>
+        <h3 class="product-name">Air Freshco</h3>
+        <p class="product-desc">Udara bersih dan murni. Kabin terasa ringan dan segar.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/new-car.webp" alt="New Car"></div>
+        <p class="product-tag">Fresh</p>
+        <h3 class="product-name">New Car</h3>
+        <p class="product-desc">Aroma mobil baru yang ikonik. Hari pertama beli kendaraan.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/red-snapper.webp" alt="Red Snapper"></div>
+        <p class="product-tag">Fresh</p>
+        <h3 class="product-name">Red Snapper</h3>
+        <p class="product-desc">Citrus aquatic yang segar dan tajam. Memicu kewaspadaan.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/summer-breeze.webp" alt="Summer Breeze"></div>
+        <p class="product-tag">Fresh</p>
+        <h3 class="product-name">Summer Breeze</h3>
+        <p class="product-desc">Semangka segar yang manis dan ringan. Sejuk dan ceria.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 6: SWEET COLLECTION -->
+  <div class="page">
+    <div class="page-header">
+      <img src="images/logo-ormoy.png" alt="ORMOY" class="page-header-logo">
+      <span class="page-number">06 / Sweet Collection</span>
+    </div>
+    <div class="collection-hero">
+      <div class="collection-hero-num">04</div>
+      <div class="collection-hero-text">
+        <h2>SWEET</h2>
+        <p>Manis dan personal — sentuhan personality yang berbeda.</p>
+      </div>
+    </div>
+    <div class="product-grid-3">
+      <div class="product">
+        <div class="product-img" style="background:#f6f3eb;display:flex;align-items:center;justify-content:center;"><span style="font-family:var(--font-heading);color:var(--gold);font-size:14pt;">French Romance</span></div>
+        <p class="product-tag">Sweet</p>
+        <h3 class="product-name">French Romance</h3>
+        <p class="product-desc">Floral manis yang elegan. Terinspirasi keanggunan Perancis.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/cherry-blossom.webp" alt="Cherry Blossom"></div>
+        <p class="product-tag">Sweet</p>
+        <h3 class="product-name">Cherry Blossom</h3>
+        <p class="product-desc">Bunga sakura yang lembut dan feminin. Tenang dan dreamy.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/rosemary.webp" alt="Rosemary"></div>
+        <p class="product-tag">Sweet</p>
+        <h3 class="product-name">Rosemary</h3>
+        <p class="product-desc">Segar, manis, dan citrusy. Buah-buahan ceria yang mengangkat mood.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/purple-rain.webp" alt="Purple Rain"></div>
+        <p class="product-tag">Sweet</p>
+        <h3 class="product-name">Purple Rain</h3>
+        <p class="product-desc">Iris dan violet yang misterius dan memesona. Tampil beda.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/crunchy-apple.webp" alt="Crunchy Apple"></div>
+        <p class="product-tag">Sweet</p>
+        <h3 class="product-name">Crunchy Apple</h3>
+        <p class="product-desc">Apel renyah yang manis dan ceria. Energi positif setiap perjalanan.</p>
+      </div>
+      <div class="product">
+        <div class="product-img"><img src="images/cool-stream.webp" alt="Cool Stream"></div>
+        <p class="product-tag">Sweet</p>
+        <h3 class="product-name">Cool Stream</h3>
+        <p class="product-desc">Manis dan segar berpadu sempurna. Kesegaran yang memanjakan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 7: B2B PARTNERSHIP -->
+  <div class="page">
+    <div class="page-header">
+      <img src="images/logo-ormoy.png" alt="ORMOY" class="page-header-logo">
+      <span class="page-number">07 / Kemitraan B2B</span>
+    </div>
+    <div class="partnership-hero">
+      <p class="eyebrow">Peluang Kemitraan</p>
+      <h2>Jadi Distributor Resmi ORMOY</h2>
+      <p>Bergabung dengan jaringan distributor parfum mobil premium Indonesia. Permintaan stabil, brand established, dukungan penuh dari pusat.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h4>Brand Established</h4>
+        <p>14+ tahun di pasar, sudah dikenal &amp; dicari konsumen Indonesia.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3.5-7.1"/><path d="M21 4v5h-5"/></svg></div>
+        <h4>Repeat Order Tinggi</h4>
+        <p>Pelanggan loyal dengan tingkat pembelian ulang yang konsisten.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></div>
+        <h4>Margin Kompetitif</h4>
+        <p>Skema harga distributor dengan margin yang sehat &amp; berkelanjutan.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h4>21+ Varian Produk</h4>
+        <p>Diversifikasi luas dalam 4 koleksi untuk berbagai segmen pasar.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6.5 1-4.5 4.5 1 6.5L12 17l-6 3 1-6.5L2.5 9 9 8l3-6z"/></svg></div>
+        <h4>Kualitas Terjaga</h4>
+        <p>Produksi langsung dengan kontrol kualitas &amp; slow-release technology.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M5 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
+        <h4>Dukungan Penuh</h4>
+        <p>Materi marketing, foto produk, training, &amp; promosi nasional.</p>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Hubungi Tim Distribusi Kami</h3>
+      <p style="color:rgba(255,255,255,0.65);font-size:9.5pt;">Diskusi peluang kemitraan, skema harga, dan ketersediaan wilayah.</p>
+      <div class="contact-row">
+        <div class="contact-item">
+          <p class="label">WhatsApp Utama</p>
+          <p class="val">+62 812 1617 1974</p>
+        </div>
+        <div class="contact-item">
+          <p class="label">WhatsApp Alternatif</p>
+          <p class="val">+62 811 3430 206</p>
+        </div>
+      </div>
+      <div class="contact-footer">
+        <p>Email: <a href="mailto:ormoyid@gmail.com">ormoyid@gmail.com</a> &nbsp;|&nbsp; Web: <a href="https://ormoy.co.id">ormoy.co.id/mitra</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 8: BACK COVER -->
+  <div class="page back-cover">
+    <img src="images/logo-ormoy.png" alt="ORMOY" class="back-logo">
+    <p class="back-tag">The Luxurious Fragrance</p>
+    <p style="color:rgba(255,255,255,0.6);font-size:10pt;max-width:130mm;line-height:1.7;">Terima kasih telah mempertimbangkan kemitraan dengan ORMOY. Kami siap menjadi partner pertumbuhan bisnis kamu.</p>
+    <p class="back-url">ormoy.co.id</p>
+    <p class="back-cv">CV ORMOY INDO PRATAMA &nbsp;·&nbsp; EST. 2012</p>
+    <p style="color:rgba(255,255,255,0.55);font-size:8pt;line-height:1.6;max-width:120mm;margin-top:8mm;">Jl. Jemursari Selatan IV No. 2A, Jemur Wonosari, Kec. Wonocolo, Surabaya, Jawa Timur 60237, Indonesia</p>
+    <p style="color:rgba(255,255,255,0.35);font-size:7pt;line-height:1.55;max-width:120mm;margin-top:3mm;">Kantor dan fasilitas produksi. Tidak melayani kunjungan atau pembelian langsung &mdash; pembelian melalui toko official atau jaringan distributor. Merek terdaftar DJKI No. IDM000528488 (Kelas 3).</p>
+  </div>
+
+</body>
+
+</html>

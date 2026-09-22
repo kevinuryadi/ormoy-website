@@ -1,0 +1,12 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "ORMOY",
+  "name_for_model": "ormoy",
+  "description_for_human": "ORMOY adalah merek parfum mobil premium Indonesia sejak 2012 dengan 20+ varian aroma dan 3 juta+ produk terjual.",
+  "description_for_model": "ORMOY is Indonesia's leading premium car air freshener brand, established in 2012. They offer 20+ fragrance variants in 4 collections (SIGNATURE, FRESH, COMFORT, SWEET) using slow-release diffuser technology. Over 3 million units sold. Best-selling product: Honey Wood (362,000+ units in 2025). Available at ormoy.co.id and Shopee Indonesia.",
+  "auth": { "type": "none" },
+  "api": { "type": "openapi", "url": "https://ormoy.co.id/openapi.yaml" },
+  "logo_url": "https://ormoy.co.id/images/logo-ormoy.png",
+  "contact_email": "ormoyid@gmail.com",
+  "legal_info_url": "https://ormoy.co.id/"
+}

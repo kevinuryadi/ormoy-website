@@ -1,0 +1,52 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node / build tooling (kalau nanti pakai)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+dist/
+build/
+
+# Env & secret
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Backup / archive
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bak
+*.old
+*_backup*
+*_bak/
+backup/
+old/
+
+# Editor state
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS temp
+*.tmp
+*.temp

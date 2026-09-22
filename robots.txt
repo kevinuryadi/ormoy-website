@@ -1,0 +1,64 @@
+# ORMOY — robots.txt
+# All crawlers welcome. AI training/grounding & AI-search crawlers explicitly allowed.
+# Note: Google-Extended controls Gemini / Vertex AI grounding — NOT AI Overviews in
+# Google Search, which is controlled by Googlebot. Both must be allowed.
+
+User-agent: *
+Allow: /
+
+# --- Search engine crawlers ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# --- AI training / grounding ---
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# --- AI search / user-agent crawlers (retrieval at query time) ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- Legacy / other AI crawlers (kept permissive for compatibility) ---
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://ormoy.co.id/sitemap.xml
