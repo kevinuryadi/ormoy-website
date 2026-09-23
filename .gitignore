@@ -50,3 +50,9 @@ old/
 # OS temp
 *.tmp
 *.temp
+
+# Internal working docs (not for public serve)
+ORMOY-GEO-BRIEF.md
+
+# Claude Code local settings (per-user, machine-specific paths)
+.claude/
