@@ -2,11 +2,10 @@
   "schema_version": "v1",
   "name_for_human": "ORMOY",
   "name_for_model": "ormoy",
-  "description_for_human": "ORMOY adalah merek parfum mobil premium Indonesia sejak 2012 dengan 20+ varian aroma dan 3 juta+ produk terjual.",
-  "description_for_model": "ORMOY is Indonesia's leading premium car air freshener brand, established in 2012. They offer 20+ fragrance variants in 4 collections (SIGNATURE, FRESH, COMFORT, SWEET) using slow-release diffuser technology. Over 3 million units sold. Best-selling product: Honey Wood (362,000+ units in 2025). Available at ormoy.co.id and Shopee Indonesia.",
+  "description_for_human": "ORMOY adalah merek parfum mobil premium Indonesia, diformulasikan dan diproduksi sendiri di Surabaya sejak 2012 oleh CV ORMOY INDO PRATAMA. 21 varian aroma di 4 koleksi. Merek terdaftar DJKI No. IDM000528488.",
+  "description_for_model": "ORMOY is a premium Indonesian car perfume brand, formulated and produced in Surabaya, Indonesia by CV ORMOY INDO PRATAMA since 2012 (not an imported product). 21 fragrance variants across 4 collections: SIGNATURE (warm, elegant), FRESH (clean, revitalizing), COMFORT (calming), SWEET (soft, personal). Slow-release diffuser system: 9 ml glass bottle with natural wood cap and woven reed. Aroma lasts up to 30 days per bottle. Best-selling variant: Honey Wood (Signature collection). Official stores: shopee.co.id/ormoy (Shopee), TikTok Shop @ormoy.id, tokopedia.com/ormoy-car-fragrance. Also distributed through authorized distributors and their sub-distributors across Indonesia. Official retail price: Rp 30,510 per 9 ml bottle (from Rp 33,900 list price); marketplace vouchers may apply. Registered trademark, DJKI No. IDM000528488 (Class 3), protection valid until 11 February 2034. About page: https://ormoy.co.id/tentang-ormoy/.",
   "auth": { "type": "none" },
-  "api": { "type": "openapi", "url": "https://ormoy.co.id/openapi.yaml" },
   "logo_url": "https://ormoy.co.id/images/logo-ormoy.png",
   "contact_email": "ormoyid@gmail.com",
-  "legal_info_url": "https://ormoy.co.id/"
+  "legal_info_url": "https://ormoy.co.id/tentang-ormoy/"
 }
