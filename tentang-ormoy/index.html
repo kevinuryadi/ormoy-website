@@ -222,11 +222,10 @@
     .story-text p { font-size: 1.06rem; color: rgba(255,255,255,0.86); line-height: 1.85; margin: 0 0 22px; }
     .story-text p:last-child { margin-bottom: 0; }
     .story-text strong { color: #fff; font-weight: 500; }
-    .story-media { position: relative; aspect-ratio: 4/5; background: linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(255,255,255,0.02) 100%); border: 1px dashed rgba(201,168,76,0.28); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .story-media::before { content: ''; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,0.05); pointer-events: none; }
-    .story-media-label { position: relative; z-index: 1; text-align: center; padding: 32px; }
-    .story-media-label span { display: block; font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(201,168,76,0.75); font-weight: 500; margin-bottom: 12px; }
-    .story-media-label small { display: block; font-size: 0.78rem; letter-spacing: 0; color: rgba(255,255,255,0.4); line-height: 1.6; max-width: 220px; margin: 0 auto; }
+    .story-media { position: relative; aspect-ratio: 4/5; overflow: hidden; background: #0a0a0a; }
+    .story-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .story-media::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(201,168,76,0.15); pointer-events: none; }
+    .story-media figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 20px; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75) 100%); color: rgba(255,255,255,0.72); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; z-index: 1; }
 
     /* Collections — editorial list (avoid repeat pola made cards) */
     .collections { background: #0d0d0d; padding: 72px 0; }
@@ -249,7 +248,11 @@
 
     /* Made section — 3 pillars */
     .made { background: #0a0a0a; padding: 72px 0; }
-    .made-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 44px; }
+    .made-photo { position: relative; max-width: 1080px; margin: 40px auto 44px; aspect-ratio: 5/2; overflow: hidden; }
+    .made-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; display: block; }
+    .made-photo::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(201,168,76,0.15); pointer-events: none; }
+    .made-photo figcaption { position: absolute; left: 20px; bottom: 16px; z-index: 1; padding: 6px 12px; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); color: rgba(255,255,255,0.82); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; }
+    .made-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
     .made-card { background: #111; border: 1px solid rgba(255,255,255,0.06); padding: 30px 26px; }
     .made-card h3 { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 500; color: var(--gold); margin: 0 0 12px; letter-spacing: .5px; }
     .made-card p { font-size: 0.9rem; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.7; }
@@ -307,6 +310,8 @@
       .section, .made, .collections, .buy, .story { padding: 56px 0; }
       .about-hero-lead { font-size: 1rem; }
       .footer-grid { grid-template-columns: 1fr; }
+      .made-photo { aspect-ratio: 3/2; margin: 32px auto 36px; }
+      .made-photo img { object-position: 50% 45%; }
     }
   </style>
   <link rel="preload" as="image" href="../images/hero-blue.webp" fetchpriority="high" type="image/webp">
@@ -389,12 +394,13 @@
           <p>ORMOY <strong>diformulasikan dan diproduksi sendiri di Surabaya, Indonesia</strong> sejak 2012 oleh CV ORMOY INDO PRATAMA. ORMOY <strong>bukan produk jadi impor</strong> &mdash; kami merancang setiap aroma, menakar setiap komposisi, dan mengemas setiap botol di dalam negeri.</p>
           <p>ORMOY adalah <strong>merek terdaftar</strong> di Direktorat Jenderal Kekayaan Intelektual dengan nomor pendaftaran <strong>IDM000528488</strong> pada Kelas 3, dengan perlindungan berlaku hingga <strong>11 Februari 2034</strong>. Status ini bisa diverifikasi siapa pun lewat database PDKI DJKI.</p>
         </div>
-        <div class="story-media" role="img" aria-label="Foto placeholder — akan diganti dengan foto suasana produksi atau botol ORMOY">
-          <div class="story-media-label">
-            <span>Foto Placeholder</span>
-            <small>Ganti dengan foto suasana produksi, botol, atau tim ORMOY</small>
-          </div>
-        </div>
+        <figure class="story-media">
+          <picture>
+            <source type="image/webp" srcset="../images/production-pressing-800.webp 800w, ../images/production-pressing-1200.webp 1200w" sizes="(max-width: 968px) 90vw, 480px">
+            <img src="../images/production-pressing-1200.jpg" srcset="../images/production-pressing-800.jpg 800w, ../images/production-pressing-1200.jpg 1200w" sizes="(max-width: 968px) 90vw, 480px" alt="Perakitan tangan botol Honey Wood dengan reed anyaman dan tutup kayu di fasilitas produksi ORMOY di Surabaya" loading="lazy" width="900" height="1200">
+          </picture>
+          <figcaption>Perakitan manual — Surabaya</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -405,6 +411,13 @@
       <p class="section-label">Cara ORMOY Dibuat</p>
       <h2 class="section-title">Detail yang Kelihatan &mdash; dan yang Tidak</h2>
       <p class="section-body" style="text-align:center;margin-bottom:12px;">Setiap botol ORMOY dirakit dari tiga komponen sederhana. Kombinasinya yang membuat aroma bertahan konsisten hingga <strong>30 hari</strong> di kabin kendaraan.</p>
+      <figure class="made-photo">
+        <picture>
+          <source type="image/webp" srcset="../images/production-filling-800.webp 800w, ../images/production-filling-1200.webp 1200w" sizes="(max-width: 1080px) 100vw, 1080px">
+          <img src="../images/production-filling-1200.jpg" srcset="../images/production-filling-800.jpg 800w, ../images/production-filling-1200.jpg 1200w" sizes="(max-width: 1080px) 100vw, 1080px" alt="Proses pengisian ratusan botol kaca 9 ml ORMOY di lini produksi Surabaya" loading="lazy" width="1200" height="480">
+        </picture>
+        <figcaption>Lini pengisian &mdash; Surabaya</figcaption>
+      </figure>
       <div class="made-grid">
         <div class="made-card">
           <h3>Botol Kaca 9 ml</h3>
