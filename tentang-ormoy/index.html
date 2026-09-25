@@ -5,20 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tentang ORMOY. Parfum Mobil Indonesia sejak 2012</title>
-  <meta name="description" content="ORMOY parfum mobil buatan Indonesia. Kami produksi sendiri di Indonesia sejak 2012 di bawah CV ORMOY INDO PRATAMA. 21 varian di 4 koleksi. Merek terdaftar DJKI No. IDM000528488.">
+  <meta name="description" content="ORMOY parfum mobil buatan Indonesia sejak 2012. Aromanya tidak bikin pusing atau mual, botol 9 ml tahan sekitar 30 hari. 21 varian dalam 4 koleksi.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ORMOY">
   <meta property="og:locale" content="id_ID">
   <meta property="og:title" content="Tentang ORMOY. Parfum Mobil Indonesia sejak 2012">
-  <meta property="og:description" content="ORMOY parfum mobil buatan Indonesia. Kami buat sendiri di Indonesia sejak 2012. 21 varian di 4 koleksi. Merek terdaftar DJKI.">
+  <meta property="og:description" content="ORMOY parfum mobil buatan Indonesia sejak 2012. Aromanya tidak bikin pusing, tahan sekitar 30 hari. 21 varian dalam 4 koleksi.">
   <meta property="og:url" content="https://ormoy.co.id/tentang-ormoy/">
   <meta property="og:image" content="https://ormoy.co.id/images/hero-blue.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tentang ORMOY. Parfum Mobil Indonesia sejak 2012">
-  <meta name="twitter:description" content="ORMOY parfum mobil dari CV ORMOY INDO PRATAMA, dibuat di Indonesia sejak 2012. Merek terdaftar DJKI No. IDM000528488.">
+  <meta name="twitter:description" content="ORMOY parfum mobil buatan Indonesia sejak 2012. Aromanya tidak bikin pusing, tahan sekitar 30 hari.">
   <meta name="twitter:image" content="https://ormoy.co.id/images/hero-blue.jpg">
   <link rel="canonical" href="https://ormoy.co.id/tentang-ormoy/">
   <link rel="alternate" hreflang="id" href="https://ormoy.co.id/tentang-ormoy/">
@@ -235,7 +235,33 @@
     .story-media::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(201,168,76,0.15); pointer-events: none; }
     .story-media figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 20px; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75) 100%); color: rgba(255,255,255,0.72); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; z-index: 1; }
 
-    /* Collections . editorial list (avoid repeat pola made cards) */
+    /* Single-column narrative story (rombakan 2026-09-25) */
+    .story-narrow { padding: 88px 0 72px; background: var(--black); }
+    .story-narrow .container { max-width: 720px; }
+    .story-narrow-photo { margin: 0 auto 56px; max-width: 620px; }
+    .story-narrow-photo picture, .story-narrow-photo img { display: block; width: 100%; height: auto; }
+    .story-narrow-photo figcaption { font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); text-align: center; padding-top: 14px; }
+    .story-narrow-prose p { font-size: 1.08rem; color: rgba(255,255,255,0.85); line-height: 1.9; margin: 0 0 26px; }
+    .story-narrow-prose p:last-child { margin-bottom: 0; }
+    .story-narrow-prose strong { color: #fff; font-weight: 500; }
+
+    /* Koleksi ringkas */
+    .koleksi { padding: 72px 0 88px; background: #0d0d0d; }
+    .koleksi-content { max-width: 640px; text-align: center; }
+    .koleksi h2 { font-family: var(--font-heading); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 400; color: #fff; margin: 0 0 28px; letter-spacing: -0.01em; scroll-margin-top: 96px; }
+    .koleksi p { font-size: 1.05rem; color: rgba(255,255,255,0.78); line-height: 1.85; margin: 0 0 36px; }
+    .koleksi-link { display: inline-block; font-size: 0.78rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; padding: 14px 32px; border: 1px solid var(--gold); color: var(--gold); }
+    .koleksi-link:hover { background: var(--gold); color: #000; }
+
+    @media (max-width: 640px) {
+      .story-narrow { padding: 64px 0 48px; }
+      .story-narrow-photo { margin-bottom: 40px; }
+      .story-narrow-prose p { font-size: 1rem; margin-bottom: 22px; }
+      .koleksi { padding: 56px 0 72px; }
+      .koleksi p { font-size: 0.98rem; }
+    }
+
+    /* Legacy classes untuk story 2-col . tetap ada tapi tidak dipakai lagi */
     .collections { background: #0d0d0d; padding: 72px 0; }
     .collections-header { text-align: center; margin-bottom: 32px; }
     .collections-intro { max-width: 640px; margin: 20px auto 0; font-size: 1.02rem; color: rgba(255,255,255,0.7); line-height: 1.75; text-align: center; }
@@ -374,122 +400,36 @@
   <section class="about-hero">
     <div class="about-hero-overlay"></div>
     <div class="container about-hero-content">
-      <p class="about-hero-label">Tentang ORMOY</p>
+      <p class="about-hero-label">Tentang</p>
       <h1 class="about-hero-title">Tentang ORMOY</h1>
-      <p class="about-hero-lead"><strong>ORMOY</strong> adalah merek parfum mobil Indonesia yang dirancang tidak menyebabkan pusing atau mual pada perjalanan panjang. Setiap botol tahan sekitar 30 hari pemakaian normal.</p>
+      <p class="about-hero-lead"><strong>ORMOY</strong> adalah parfum mobil buatan Indonesia. Kami membuatnya sejak 2012 supaya kamu bisa menikmati perjalanan panjang tanpa aroma kabin yang bikin pusing atau mual.</p>
     </div>
   </section>
 
-  <!-- Fact strip -->
-  <section class="facts">
+  <!-- Cerita brand: single-column narrative + one large photo -->
+  <section class="story-narrow">
     <div class="container">
-      <div class="facts-grid">
-        <div>
-          <span class="fact-num">14+</span>
-          <span class="fact-lbl">Tahun Beroperasi</span>
-        </div>
-        <div>
-          <span class="fact-num">21</span>
-          <span class="fact-lbl">Varian Aroma</span>
-        </div>
-        <div>
-          <span class="fact-num">4</span>
-          <span class="fact-lbl">Koleksi Aroma</span>
-        </div>
-        <div>
-          <span class="fact-num">3 Juta+</span>
-          <span class="fact-lbl">Botol Terjual</span>
-        </div>
+      <figure class="story-narrow-photo">
+        <picture>
+          <source type="image/webp" srcset="../images/about-honey-wood-800.webp 800w, ../images/about-honey-wood-1200.webp 1200w" sizes="(max-width: 720px) 92vw, 640px">
+          <img src="../images/about-honey-wood-1200.jpg" srcset="../images/about-honey-wood-800.jpg 800w, ../images/about-honey-wood-1200.jpg 1200w" sizes="(max-width: 720px) 92vw, 640px" alt="Botol parfum mobil ORMOY Honey Wood dengan tutup kayu dan reed anyaman." loading="lazy" width="1200" height="1200">
+        </picture>
+        <figcaption>BOTOL PARFUM MOBIL ORMOY</figcaption>
+      </figure>
+      <div class="story-narrow-prose">
+        <p>Kami memulai <strong>ORMOY</strong> di Surabaya, Indonesia pada 2012. Waktu itu kebanyakan parfum mobil di pasaran menyerbu masuk kabin. Wanginya kuat di awal, lalu bikin pusing setelah setengah jam. Kami mau produk yang berbeda.</p>
+        <p>Aromanya kami buat lembut supaya tetap menyenangkan di perjalanan panjang. Botol 9 ml kami tahan sekitar 30 hari, mengeluarkan wanginya perlahan sepanjang bulan. Formulanya memakai bahan wewangian bermutu tinggi, itu sebabnya wanginya konsisten dan tidak bikin mual walaupun kamu duduk lama di kabin yang panas.</p>
+        <p>Lebih dari <strong>tiga juta botol</strong> ORMOY sudah dipercayakan ke pengemudi di seluruh Indonesia. Bukan produk impor. Kami memproduksi semuanya sendiri, dan setiap varian formulanya tidak berubah sejak hari pertama diluncurkan. Aroma favoritmu yang dibeli hari ini masih akan sama tahun depan.</p>
       </div>
     </div>
   </section>
 
-  <!-- Cerita / Legal & Origin -->
-  <section class="section story">
-    <video class="story-video-bg" autoplay muted loop playsinline preload="none" poster="../images/hero-blue.webp">
-      <source src="../images/about-video.mp4" type="video/mp4">
-    </video>
-    <div class="story-overlay"></div>
-    <div class="container">
-      <div class="story-header">
-        <p class="section-label">Cerita ORMOY</p>
-        <h2 class="section-title">Latar Belakang Merek</h2>
-      </div>
-      <div class="story-grid">
-        <div class="story-text">
-          <p>ORMOY diproduksi di <strong>Surabaya, Indonesia</strong>, oleh <strong>CV ORMOY INDO PRATAMA</strong> sejak 2012. Bukan produk impor. Setiap varian dirancang menghasilkan aroma kabin yang tetap nyaman digunakan pada perjalanan panjang, tanpa efek pusing atau mual yang biasa muncul akibat parfum mobil dengan intensitas berlebih.</p>
-          <p>Merek ORMOY terdaftar resmi di Direktorat Jenderal Kekayaan Intelektual. Status pendaftaran ini dapat diverifikasi publik lewat database PDKI DJKI, sehingga keaslian merek dapat dikonfirmasi secara mandiri oleh siapa pun.</p>
-          <p>ORMOY telah beroperasi selama <strong>14 tahun</strong> dan mendistribusikan lebih dari <strong>3 juta botol</strong> ke seluruh Indonesia. Skala distribusi ini menjangkau berbagai kota, dari kota besar hingga daerah dengan akses ritel yang lebih terbatas.</p>
-          <p>Diformulasikan dengan bahan wewangian bermutu tinggi. Formulasi setiap varian dipertahankan tanpa perubahan sejak awal produksi, sehingga aroma yang tersedia hari ini identik dengan formula pada tahun-tahun sebelumnya. Pembeli dapat kembali membeli varian favorit tanpa khawatir perubahan karakter aroma.</p>
-        </div>
-        <figure class="story-media">
-          <picture>
-            <source type="image/webp" srcset="../images/about-honey-wood-800.webp 800w, ../images/about-honey-wood-1200.webp 1200w" sizes="(max-width: 968px) 90vw, 480px">
-            <img src="../images/about-honey-wood-1200.jpg" srcset="../images/about-honey-wood-800.jpg 800w, ../images/about-honey-wood-1200.jpg 1200w" sizes="(max-width: 968px) 90vw, 480px" alt="Botol parfum mobil ORMOY Honey Wood dengan tutup kayu dan reed anyaman." loading="lazy" width="900" height="1200">
-          </picture>
-          <figcaption>BOTOL PARFUM MOBIL ORMOY</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Collections -->
-  <section class="section collections">
-    <div class="container">
-      <div class="collections-header">
-        <p class="section-label">4 Koleksi</p>
-        <h2 class="section-title">Empat Kelompok Aroma</h2>
-        <p class="collections-intro">21 varian ORMOY dibagi ke dalam empat kelompok. Pemilihan koleksi bergantung pada karakter aroma yang diinginkan dan kondisi kabin saat berkendara.</p>
-      </div>
-      <div class="col-list">
-        <div class="col-row">
-          <span class="col-row-num">01</span>
-          <span class="col-row-name">Signature</span>
-          <span class="col-row-desc">Karakter aroma kayu dan hangat. Cocok untuk perjalanan panjang di malam hari. Honey Wood merupakan varian terlaris dari koleksi ini. <a href="../#produk">Lihat koleksi &rarr;</a></span>
-        </div>
-        <div class="col-row">
-          <span class="col-row-num">02</span>
-          <span class="col-row-name">Fresh</span>
-          <span class="col-row-desc">Karakter aroma segar. Cocok untuk pemakaian siang hari di kabin bersuhu tinggi. Green Ice, New Car, dan Blue Blazer termasuk dalam koleksi ini. <a href="../#produk">Lihat koleksi &rarr;</a></span>
-        </div>
-        <div class="col-row">
-          <span class="col-row-num">03</span>
-          <span class="col-row-name">Comfort</span>
-          <span class="col-row-desc">Karakter aroma kopi dan cokelat. Menghadirkan suasana kabin yang menyerupai kafe. Black Coffee, Mocha Coffee, dan Choco Latte termasuk dalam koleksi ini. <a href="../#produk">Lihat koleksi &rarr;</a></span>
-        </div>
-        <div class="col-row">
-          <span class="col-row-num">04</span>
-          <span class="col-row-name">Sweet</span>
-          <span class="col-row-desc">Karakter aroma manis dan floral. Cherry Blossom, French Romance, dan Purple Rain termasuk dalam koleksi ini. <a href="../#produk">Lihat koleksi &rarr;</a></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Where to buy -->
-  <section class="section buy">
-    <div class="container">
-      <p class="section-label">Di Mana Beli</p>
-      <h2 class="section-title">Toko Official ORMOY</h2>
-      <p class="section-body" style="text-align:center;margin-bottom:0;">ORMOY menjalankan tiga toko official yang dikelola langsung oleh CV ORMOY INDO PRATAMA. Pembelian melalui kanal ini menjamin produk asli beserta layanan purnajual resmi. Selain toko official, ORMOY didistribusikan lewat jaringan distributor resmi yang menjangkau berbagai kota di Indonesia.</p>
-      <div class="buy-grid">
-        <div class="buy-card">
-          <h3>Shopee Official</h3>
-          <p>Katalog lengkap 21 varian di Shopee ORMOY.</p>
-          <a href="https://shopee.co.id/ormoy" target="_blank" rel="noopener" class="buy-btn">Buka Shopee</a>
-        </div>
-        <div class="buy-card">
-          <h3>TikTok Shop</h3>
-          <p>Belanja langsung dari akun resmi @ormoy.id di TikTok Shop.</p>
-          <a href="https://www.tiktok.com/@ormoy.id" target="_blank" rel="noopener" class="buy-btn">Buka TikTok Shop</a>
-        </div>
-        <div class="buy-card">
-          <h3>Tokopedia Official</h3>
-          <p>Toko official Tokopedia dengan nama Ormoy Car Fragrance.</p>
-          <a href="https://www.tokopedia.com/ormoy-car-fragrance" target="_blank" rel="noopener" class="buy-btn">Buka Tokopedia</a>
-        </div>
-      </div>
-      <p class="buy-note">Harga resmi di toko official adalah <strong style="color:#fff;">Rp 30.510</strong> per botol 9 ml, dari harga normal Rp 33.900. Voucher marketplace yang aktif dapat menurunkan harga lebih jauh. Harga di toko lain yang bukan official dapat berbeda mengikuti margin masing-masing distributor.</p>
+  <!-- Koleksi: prose ringkas + link -->
+  <section class="koleksi">
+    <div class="container koleksi-content">
+      <h2>21 pilihan aroma, satu harga.</h2>
+      <p>SIGNATURE untuk aroma kayu hangat, dipimpin Honey Wood. FRESH untuk yang segar seperti Green Ice dan New Car. COMFORT untuk kopi dan cokelat. SWEET untuk manis dan floral.</p>
+      <a href="../#produk" class="koleksi-link">Lihat semua varian &rarr;</a>
     </div>
   </section>
 
