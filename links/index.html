@@ -21,7 +21,7 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0a0a0a url('../images/honey-wood.webp') no-repeat center center / cover;
+      background: #0a0a0a url('../images/honeywood-bg.webp') no-repeat center center / cover;
       color: #fff;
       min-height: 100dvh; /* dynamic viewport — handles mobile browser chrome */
       position: relative;
@@ -181,10 +181,12 @@
       .link-btn { font-size: 0.88rem; padding: 13px 16px; }
     }
   </style>
+  <link rel="preload" as="image" href="../images/honeywood-bg.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="video" href="../images/Honeywood.mp4" type="video/mp4">
 </head>
 <body>
 
-  <video class="video-bg" autoplay muted loop playsinline preload="none" poster="../images/honey-wood.webp">
+  <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="../images/honeywood-bg.webp">
     <source src="../images/Honeywood.mp4" type="video/mp4">
   </video>
   <div class="video-overlay"></div>
